@@ -5,6 +5,8 @@ import { Wrapper } from "../components/wrapper/Wrapper";
 import { Hobbies } from "../utils/about/hobbies-text";
 import { Educations } from "../utils/about/education-text";
 import { Experiences } from "../utils/about/experience-text";
+
+// @ts-ignore
 import img from "./pic.jpg";
 import "./About.scss";
 

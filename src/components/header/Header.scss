@@ -36,6 +36,7 @@ $medium: 900px;
     }
 
     &__link {
+        cursor: pointer;
         @media screen and (max-width: $medium) {
             font-size: 12px;
         }

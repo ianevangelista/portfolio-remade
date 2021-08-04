@@ -1,22 +1,34 @@
-import { NavLink } from "@fremtind/jkl-core";
+import { Link } from "@fremtind/jkl-core";
+import { useHistory } from "react-router";
 import "./Header.scss";
 
 export const Header = () => {
+    const history = useHistory();
     return (
         <div className="header">
-            <NavLink href="/">
+            <Link href="/">
                 <p className="jkl-heading-1 header__title">Portfolio</p>
-            </NavLink>
+            </Link>
             <div className="header__links">
-                <NavLink href="/about" className="header__link">
+                <Link
+                    onClick={() => {
+                        history.push("/about");
+                    }}
+                    className="header__link"
+                >
                     About
-                </NavLink>
-                <NavLink href="/projects" className="header__link">
+                </Link>
+                <Link
+                    onClick={() => {
+                        history.push("/projects");
+                    }}
+                    className="header__link"
+                >
                     Projects
-                </NavLink>
-                <NavLink href="./cv.pdf" className="header__link">
+                </Link>
+                <Link external href="./cv.pdf" className="header__link">
                     Curriculum Vitae
-                </NavLink>
+                </Link>
             </div>
         </div>
     );
