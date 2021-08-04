@@ -14,7 +14,7 @@ export const Header = () => {
                 <Link href="/projects" className="header__link">
                     Projects
                 </Link>
-                <Link href="/cv" className="header__link">
+                <Link href="./cv.pdf" className="header__link">
                     Curriculum Vitae
                 </Link>
             </div>

@@ -2,6 +2,7 @@
   "name": "portfolio-remade",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ianevangelista.no",
   "dependencies": {
     "@fremtind/jkl-accordion-react": "^4.0.0",
     "@fremtind/jkl-button-react": "^5.0.1",
@@ -36,6 +37,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
