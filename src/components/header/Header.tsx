@@ -1,22 +1,22 @@
-import { Link } from "@fremtind/jkl-core";
+import { NavLink } from "@fremtind/jkl-core";
 import "./Header.scss";
 
 export const Header = () => {
     return (
         <div className="header">
-            <Link href="/">
+            <NavLink href="/">
                 <p className="jkl-heading-1 header__title">Portfolio</p>
-            </Link>
+            </NavLink>
             <div className="header__links">
-                <Link href="/about" className="header__link">
+                <NavLink href="/about" className="header__link">
                     About
-                </Link>
-                <Link href="/projects" className="header__link">
+                </NavLink>
+                <NavLink href="/projects" className="header__link">
                     Projects
-                </Link>
-                <Link href="./cv.pdf" className="header__link">
+                </NavLink>
+                <NavLink href="./cv.pdf" className="header__link">
                     Curriculum Vitae
-                </Link>
+                </NavLink>
             </div>
         </div>
     );
