@@ -1,0 +1,13 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-webfonts/webfonts.scss";
+@import "~@fremtind/jkl-loader/loader.min.css";
+@import "~@fremtind/jkl-content-toggle/content-toggle.min.css";
+@import "~@fremtind/jkl-button/button.min.css";
+@import "~@fremtind/jkl-accordion/accordion.min.css";
+@import "~@fremtind/jkl-list/list.min.css";
+@import "~@fremtind/jkl-card/card.min.css";
+
+.index {
+    font-family: "Fremtind Grotesk", Calibri, Arial, sans-serif;
+}

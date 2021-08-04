@@ -1,0 +1,55 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+@import "~@fremtind/jkl-core/variables/_spacing.scss";
+
+$medium: 900px;
+
+.projects {
+    &__text-color {
+        color: $snohvit;
+    }
+
+    &__timeline {
+        border-left: 6px solid $snohvit;
+        height: 130vh;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 5px;
+    }
+
+    &__columns {
+        height: 130vh;
+
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__first-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+        }
+    }
+    &__second-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        color: $snohvit;
+    }
+}
