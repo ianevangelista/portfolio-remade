@@ -11,6 +11,7 @@ export const MyProjects: Project[] = [
         title: "Portfolio",
         year: "2021",
         description: "First of all this website.",
+        github: "https://github.com/ianevangelista/portfolio-remade",
     },
     {
         title: "Bachelor",
@@ -23,11 +24,13 @@ export const MyProjects: Project[] = [
         year: "2021",
         description:
             "A website for my friends and I to display what movies we want to watch for the next movie night. Each user can upvote or downvote a movie wish.",
+        github: "https://github.com/gkonsulting/gk-client",
     },
     {
         title: "Harmoni",
         year: "2020",
         description:
             "Scrum-project in Software Engineering 2 with web applications. The main task was to develope a system for event planning",
+        github: "https://github.com/ianevangelista/Harmoni",
     },
 ];

@@ -18,6 +18,10 @@ $medium: 900px;
         left: 50%;
         margin-left: -3px;
         border-radius: 5px;
+
+        @media screen and (max-width: $medium) {
+            height: 140vh;
+        }
     }
 
     &__columns {
@@ -28,6 +32,7 @@ $medium: 900px;
 
         @media screen and (max-width: $medium) {
             flex-direction: column;
+            height: 140vh;
         }
     }
 

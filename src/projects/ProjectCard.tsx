@@ -23,11 +23,17 @@ export const ProjectCard = ({ project, inverted }: Props) => {
                 <p className="jkl-layout-spacing--xs-top jkl-small">
                     {project.description}
                 </p>
-                <div className="jkl-layout-spacing--xs-top">
-                    <Link external href="/" className="project-card__button ">
-                        Github
-                    </Link>
-                </div>
+                {project.github && (
+                    <div className="jkl-layout-spacing--xs-top">
+                        <Link
+                            external
+                            href={project.github}
+                            className="project-card__button "
+                        >
+                            Github
+                        </Link>
+                    </div>
+                )}
             </Card>
             <div>
                 <p className="project-card__text project-card__text--year jkl-small">
