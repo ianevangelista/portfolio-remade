@@ -18,12 +18,20 @@
 
     &__slideshow-container {
         margin-top: $layout-spacing--medium;
-        width: 35vw;
-        height: 35vh;
+        width: 50vw;
+        height: 50vh;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         justify-self: center;
+    }
+
+    &__animation-wrapper {
+        transition: 200ms height ease-in-out;
+
+        &--hidden {
+            display: none;
+        }
     }
 }

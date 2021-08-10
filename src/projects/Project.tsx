@@ -1,10 +1,12 @@
 import { TertiaryButton } from "@fremtind/jkl-button-react";
 import { Link } from "@fremtind/jkl-core";
+import { useAnimatedHeight } from "@fremtind/jkl-react-hooks";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Wrapper } from "../components/wrapper/Wrapper";
 import { MyProjects, Project } from "../utils/projects/project-text";
 import { ImageSlideshow } from "./ImageSlideshow";
+
 import "./Project.scss";
 
 interface ParamTypes {
@@ -13,7 +15,8 @@ interface ParamTypes {
 export const ProjectPage = () => {
     let { id } = useParams<ParamTypes>();
     const [project, setProject] = useState<Project>();
-    const [openImages, setOpenImages] = useState<boolean>(false);
+    const [hideImages, setHideImages] = useState<boolean>(true);
+    const [animationRef] = useAnimatedHeight<HTMLDivElement>(hideImages);
 
     useEffect(() => {
         setProject(
@@ -36,19 +39,26 @@ export const ProjectPage = () => {
                     Github
                 </Link>
             </div>
-            <p className="jkl-layout-spacing--small-top jkl-heading-2">
-                {project?.moreDescription}
-            </p>
+            <div
+                className={`project__animation-wrapper ${
+                    !hideImages && "project__animation-wrapper--hidden"
+                }`}
+                ref={animationRef}
+            >
+                <p className="jkl-layout-spacing--small-top jkl-heading-2">
+                    {project?.moreDescription}
+                </p>
+            </div>
             {project?.images && (
                 <TertiaryButton
                     forceCompact
-                    className="jkl-layout-spacing--xs-top jkl-layout-spacing--medium-bottom"
-                    onClick={() => setOpenImages(!openImages)}
+                    className="jkl-layout-spacing--xs-top jkl-layout-spacing--medium-bottom project__button"
+                    onClick={() => setHideImages(!hideImages)}
                 >
-                    {openImages ? "Close" : "View images"}
+                    {hideImages ? " View images" : "Hide images"}
                 </TertiaryButton>
             )}
-            {openImages && project?.images && (
+            {!hideImages && project?.images && (
                 <div className="project__slideshow-container">
                     <ImageSlideshow images={project?.images} />
                 </div>

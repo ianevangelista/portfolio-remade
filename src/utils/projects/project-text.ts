@@ -6,9 +6,7 @@ export interface Project {
     images?: string[];
     github?: string;
     path?: string;
-    moreTitle?: string;
     moreDescription?: string;
-    moreTaskDescription?: string;
 }
 
 export const MyProjects: Project[] = [
@@ -30,6 +28,8 @@ export const MyProjects: Project[] = [
         path: "/projects/bachelor",
         description:
             "An app for healthcare professionals to remote monitor patients.",
+        moreDescription:
+            "Infiniwell is an AI company that three other students and I worked with during our bachelor´s assignment. Their plan is to contribute to digitalization of health care by automating patient diagnostics with the help of artificial intelligence and patient monitors that streams data directly to healthcare profressionals. In our thesis we described our development of a mobile application for Infiniwell. The mobile application recieves data from patient monitors through a cloud-based service. Infiniwell's goal is to streamline healthcare professionals workday by decreasing time spent on administrative tasks, and assist in clinical desicion making. To reach this goal, healthcare professionals need a useful and user friendly mobile application.",
     },
     {
         id: "gk",
@@ -39,6 +39,8 @@ export const MyProjects: Project[] = [
         description:
             "A website for my friends and I to display what movies we want to watch for the next movie night. Each user can upvote or downvote a movie wish.",
         github: "https://github.com/gkonsulting/gk-client",
+        moreDescription:
+            "A fun little side-project I developed during the pandemic. As I lived with three other classmates and the only company we had was each other, we tended to watch a lot of movies together. As we never could agree to a movie, I decided to create this website to display all our movies wishes. It uses an open API to show a trailer of the movie typed in and each logged-in user can vote up or down for a movie. I also experimented with this website by using GraphQL with React and TypeScript.",
     },
     {
         id: "harmoni",
@@ -55,6 +57,8 @@ export const MyProjects: Project[] = [
             `/Harmoni/events.png`,
             `/Harmoni/calendar.png`,
         ],
+        moreDescription:
+            "Team scrum-project in Software Engineering 2 with web applications. The team consisted of 10 students and we worked with a Scrum-master and a product owner. The main task was to develope a system for event planning. A demo is available by the use of Firebase and Heroku.",
     },
     {
         id: "community-news",
