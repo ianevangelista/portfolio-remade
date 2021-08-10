@@ -68,4 +68,23 @@ $medium: 900px;
         text-align: center;
         text-indent: 10000px;
     }
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: $layout-spacing--small;
+    }
+    &__icon {
+        cursor: pointer;
+        margin-right: $layout-spacing--xs;
+    }
+    &__phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__phone-text {
+        @media screen and (max-width: $medium) {
+            font-size: 12px;
+        }
+    }
 }

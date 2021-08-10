@@ -19,17 +19,30 @@ export const Projects = () => {
             </div>
 
             <div className="projects__columns">
-                <div className="projects__first-col">
-                    {leftProjects.map((p) => {
-                        return <ProjectCard project={p} />;
-                    })}
-                </div>
+                {window.screen.width > 900 && (
+                    <>
+                        <div className="projects__col">
+                            {leftProjects.map((p) => {
+                                return <ProjectCard project={p} />;
+                            })}
+                        </div>
+                        <div className="projects__col">
+                            {rightProjects.map((p) => {
+                                return <ProjectCard project={p} inverted />;
+                            })}
+                        </div>
+                    </>
+                )}
+                {window.screen.width < 900 && (
+                    <>
+                        <div className="projects__col">
+                            {MyProjects.map((p) => {
+                                return <ProjectCard project={p} />;
+                            })}
+                        </div>
+                    </>
+                )}
                 <div className="projects__timeline" />
-                <div className="projects__second-col">
-                    {rightProjects.map((p) => {
-                        return <ProjectCard project={p} inverted />;
-                    })}
-                </div>
             </div>
             <div>
                 <p className="jkl-body projects__text">Some time ago</p>

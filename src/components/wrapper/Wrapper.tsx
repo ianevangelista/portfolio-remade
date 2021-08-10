@@ -10,16 +10,19 @@ interface Props {
     animation?: boolean;
     moreContent?: boolean;
     compactAutoHeight?: boolean;
+    darkMode?: boolean;
 }
 export const Wrapper = ({
     children,
     animation,
     moreContent,
     compactAutoHeight,
+    darkMode
 }: Props) => {
     return (
         <div
             className={classNames("wrapper__background", {
+                "wrapper__background--dark-mode": darkMode,
                 "wrapper__background--more-content": moreContent,
                 "wrapper__background--more-content-compact":
                     window.screen.width < 900 && !compactAutoHeight,

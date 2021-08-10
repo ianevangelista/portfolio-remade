@@ -1,0 +1,29 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/variables/_colors.scss";
+@import "~@fremtind/jkl-core/mixins/_all.scss";
+@import "~@fremtind/jkl-core/mixins/_helpers.scss";
+@import "~@fremtind/jkl-core/variables/all";
+@import "~@fremtind/jkl-core/functions";
+
+.project {
+    &__title-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__github {
+        margin-left: $layout-spacing--medium;
+    }
+
+    &__slideshow-container {
+        margin-top: $layout-spacing--medium;
+        width: 35vw;
+        height: 35vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+    }
+}

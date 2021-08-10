@@ -7,7 +7,7 @@
 $medium: 900px;
 
 .project-card {
-    min-width: 16rem;
+    min-width: 50%;
 
     @media screen and (max-width: $medium) {
         min-width: 75%;
@@ -28,10 +28,16 @@ $medium: 900px;
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            margin-top: 20rem;
 
             @media screen and (max-width: $medium) {
                 display: block;
+                margin-top: $layout-spacing--small;
+            }
+        }
+
+        &--odd {
+            margin-top: 20rem;
+            @media screen and (max-width: $medium) {
                 margin-top: $layout-spacing--small;
             }
         }
@@ -53,7 +59,7 @@ $medium: 900px;
     &__timeline {
         border: 2px solid $snohvit;
         border-radius: 5px;
-        width: 25vw;
+        width: 15vw;
 
         @media screen and (max-width: $medium) {
             display: none;
@@ -72,5 +78,11 @@ $medium: 900px;
     }
     &__button {
         color: $granitt;
+    }
+
+    &__actions-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

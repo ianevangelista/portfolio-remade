@@ -20,11 +20,12 @@ $medium: 900px;
         border-radius: 5px;
 
         @media screen and (max-width: $medium) {
-            height: 140vh;
+            height: 100%;
         }
     }
 
     &__columns {
+        position: relative;
         height: 130vh;
 
         display: flex;
@@ -32,19 +33,13 @@ $medium: 900px;
 
         @media screen and (max-width: $medium) {
             flex-direction: column;
-            height: 140vh;
+            height: max-content;
+            padding-bottom: $layout-spacing--small;
         }
     }
 
-    &__first-col {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        @media screen and (max-width: $medium) {
-            flex-direction: column;
-        }
-    }
-    &__second-col {
+    &__col {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
