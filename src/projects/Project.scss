@@ -5,6 +5,8 @@
 @import "~@fremtind/jkl-core/variables/all";
 @import "~@fremtind/jkl-core/functions";
 
+$medium: 900px;
+
 .project {
     &__title-row {
         display: flex;
@@ -25,6 +27,11 @@
         justify-content: center;
         align-items: center;
         justify-self: center;
+
+        @media screen and (max-width: $medium) {
+            width: 100%;
+            position: initial;
+        }
     }
 
     &__animation-wrapper {
@@ -32,6 +39,15 @@
 
         &--hidden {
             display: none;
+        }
+    }
+
+    &__description {
+        margin-top: $layout-spacing--small;
+        @include jkl.text-style("heading-2");
+
+        @media screen and (max-width: $medium) {
+            @include jkl.text-style("body/small-screen");
         }
     }
 }

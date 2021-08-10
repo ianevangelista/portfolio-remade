@@ -27,7 +27,7 @@ export const ProjectPage = () => {
     }, [id]);
 
     return (
-        <Wrapper darkMode animation>
+        <Wrapper darkMode animation compactAutoHeight>
             <div className="project__title-row">
                 <p className="jkl-heading-1">{project?.title}</p>
                 <Link
@@ -45,7 +45,7 @@ export const ProjectPage = () => {
                 }`}
                 ref={animationRef}
             >
-                <p className="jkl-layout-spacing--small-top jkl-heading-2">
+                <p className="jkl-heading-2 project__description">
                     {project?.moreDescription}
                 </p>
             </div>

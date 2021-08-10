@@ -30,7 +30,7 @@ export const Home = () => {
     }, [isLoading, history, nextPage]);
 
     return (
-        <Wrapper>
+        <Wrapper compactAutoHeight>
             <p className="home__title">
                 <Typist
                     cursor={{

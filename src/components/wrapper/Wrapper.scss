@@ -23,7 +23,8 @@
         }
         &--more-content-compact {
             background-image: url("./mountain-more.png");
-            min-height: auto;
+            min-height: 200vh;
+            height: max-content;
         }
         &--more-content-compact-auto {
             background-image: url("./mountain-more.png");
