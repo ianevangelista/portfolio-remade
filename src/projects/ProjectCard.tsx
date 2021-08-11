@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import { Card } from "@fremtind/jkl-card-react";
 import { Link } from "@fremtind/jkl-core";
 import { Project } from "../utils/projects/project-text";
@@ -10,6 +11,7 @@ interface Props {
     odd?: boolean;
 }
 export const ProjectCard = ({ project, inverted, odd }: Props) => {
+    const history = useHistory();
     return (
         <div
             className={classNames("", {
@@ -32,7 +34,7 @@ export const ProjectCard = ({ project, inverted, odd }: Props) => {
                                 external
                                 target="_blank"
                                 href={project.github}
-                                className="project-card__button "
+                                className="project-card__button"
                             >
                                 Github
                             </Link>
@@ -40,8 +42,10 @@ export const ProjectCard = ({ project, inverted, odd }: Props) => {
                     )}
                     <div className="jkl-layout-spacing--xs-top">
                         <Link
-                            href={project.path}
-                            className="project-card__button "
+                            onClick={() => {
+                                history.push(`${project.path}`);
+                            }}
+                            className="project-card__button"
                         >
                             Read more
                         </Link>

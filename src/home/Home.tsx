@@ -31,7 +31,7 @@ export const Home = () => {
 
     return (
         <Wrapper compactAutoHeight>
-            <p className="home__title">
+            <div className="home__title">
                 <Typist
                     cursor={{
                         show: false,
@@ -77,7 +77,7 @@ export const Home = () => {
                         negative
                     />
                 )}
-            </p>
+            </div>
         </Wrapper>
     );
 };

@@ -94,7 +94,10 @@ export const About = () => {
                             <UnorderedList>
                                 {Hobbies.map((hobby) => {
                                     return (
-                                        <ListItem className="jkl-small">
+                                        <ListItem
+                                            key={hobby.title}
+                                            className="jkl-small"
+                                        >
                                             <p className="about__bold">
                                                 {hobby.title}
                                             </p>
@@ -113,7 +116,10 @@ export const About = () => {
                             <UnorderedList>
                                 {Educations.map((e) => {
                                     return (
-                                        <ListItem className="jkl-small">
+                                        <ListItem
+                                            key={e.study}
+                                            className="jkl-small"
+                                        >
                                             <p className="about__bold">
                                                 {e.study}
                                             </p>
@@ -133,7 +139,10 @@ export const About = () => {
                             <UnorderedList>
                                 {Experiences.map((e) => {
                                     return (
-                                        <ListItem className="jkl-small">
+                                        <ListItem
+                                            key={e.title}
+                                            className="jkl-small"
+                                        >
                                             <p className="about__bold">
                                                 {e.employer}
                                             </p>

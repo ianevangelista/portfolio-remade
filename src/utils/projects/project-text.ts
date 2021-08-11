@@ -40,7 +40,8 @@ export const MyProjects: Project[] = [
             "A website for my friends and I to display what movies we want to watch for the next movie night.",
         github: "https://github.com/gkonsulting/gk-client",
         moreDescription:
-            "A fun little side-project I developed during the pandemic. As I lived with three other classmates and the only company we had was each other, we tended to watch a lot of movies together. As we never could agree to a movie, I decided to create this website to display all our movies wishes. It uses an open API to show a trailer of the movie typed in and each logged-in user can vote up or down for a movie. I also experimented with this website by using GraphQL with React and TypeScript.",
+            "A fun little side-project I developed during the pandemic. As I lived with three other classmates and the only company we had was each other, we tended to watch a lot of movies together. As we never could agree to a movie, I decided to create this website to display all our movie wishes. It uses open APIs to show a trailer of the movie typed in and to get a score of the movie somewhat close to IMDB. Each logged-in user can vote up or down for a movie. I also experimented with this website by using GraphQL with React, TypeScript and Next.js for server-side-rendering.",
+        images: [`/GK/movies.png`, `/GK/addmovie.png`, `/GK/movie.png`],
     },
     {
         id: "harmoni",

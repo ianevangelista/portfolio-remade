@@ -23,12 +23,18 @@ export const Projects = () => {
                     <>
                         <div className="projects__col">
                             {leftProjects.map((p) => {
-                                return <ProjectCard project={p} />;
+                                return <ProjectCard key={p.id} project={p} />;
                             })}
                         </div>
                         <div className="projects__col">
                             {rightProjects.map((p) => {
-                                return <ProjectCard project={p} inverted />;
+                                return (
+                                    <ProjectCard
+                                        key={p.id}
+                                        project={p}
+                                        inverted
+                                    />
+                                );
                             })}
                         </div>
                     </>
@@ -37,7 +43,7 @@ export const Projects = () => {
                     <>
                         <div className="projects__col">
                             {MyProjects.map((p) => {
-                                return <ProjectCard project={p} />;
+                                return <ProjectCard key={p.id} project={p} />;
                             })}
                         </div>
                     </>
