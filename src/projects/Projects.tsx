@@ -14,44 +14,24 @@ export const Projects = () => {
 
     return (
         <Wrapper animation moreContent>
-            <div>
-                <p className="jkl-body projects__text">Now</p>
-            </div>
+            <div className="projects">
+                <div className="projects__timeline--container">
+                    <p className="jkl-body projects__text">Now</p>
 
-            <div className="projects__columns">
-                {window.screen.width > 900 && (
-                    <>
-                        <div className="projects__col">
-                            {leftProjects.map((p) => {
-                                return <ProjectCard key={p.id} project={p} />;
-                            })}
-                        </div>
-                        <div className="projects__col">
-                            {rightProjects.map((p) => {
-                                return (
-                                    <ProjectCard
-                                        key={p.id}
-                                        project={p}
-                                        inverted
-                                    />
-                                );
-                            })}
-                        </div>
-                    </>
-                )}
-                {window.screen.width < 900 && (
-                    <>
-                        <div className="projects__col">
-                            {MyProjects.map((p) => {
-                                return <ProjectCard key={p.id} project={p} />;
-                            })}
-                        </div>
-                    </>
-                )}
-                <div className="projects__timeline" />
-            </div>
-            <div>
-                <p className="jkl-body projects__text">Some time ago</p>
+                    <div className="projects__timeline--line" />
+                    <p className="jkl-body projects__text">Some time ago</p>
+                </div>
+                <div className="projects__projects--column">
+                    {MyProjects.map((p, i) => {
+                        return (
+                            <ProjectCard
+                                inverted={(i + 1) % 2 !== 1}
+                                key={p.id}
+                                project={p}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </Wrapper>
     );

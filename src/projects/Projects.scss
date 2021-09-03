@@ -7,49 +7,37 @@
 $medium: 900px;
 
 .projects {
-    &__text-color {
-        color: $snohvit;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 160vh;
+
+    @media screen and (max-width: $medium) {
+        display: block;
     }
 
-    &__timeline {
-        border-left: 6px solid $snohvit;
-        height: 130vh;
-        position: absolute;
-        left: 50%;
-        margin-left: -3px;
-        border-radius: 5px;
-
-        @media screen and (max-width: $medium) {
-            height: 100%;
-        }
-    }
-
-    &__columns {
-        position: relative;
-        height: 130vh;
-
-        display: flex;
-        flex-direction: row;
-
-        @media screen and (max-width: $medium) {
-            flex-direction: column;
-            height: max-content;
-            padding-bottom: $layout-spacing--small;
-        }
-    }
-
-    &__col {
-        position: relative;
+    &__timeline--container {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        align-items: center;
+
         @media screen and (max-width: $medium) {
-            flex-direction: column;
+            display: none;
         }
+    }
+
+    &__timeline--line {
+        border-right: 6px solid $snohvit;
+        height: 100%;
+        margin-left: -3px;
+    }
+
+    &__projects--column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__text {
-        text-align: center;
         color: $snohvit;
     }
 }

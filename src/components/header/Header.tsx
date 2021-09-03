@@ -11,9 +11,10 @@ export const Header = () => {
             </Link>
             <div className="header__links">
                 <Link
-                    onClick={() => {
-                        history.push("/about");
-                    }}
+                    // onClick={() => {
+                    //     history.push("/about");
+                    // }}
+                    href="/about"
                     className="header__link"
                 >
                     About

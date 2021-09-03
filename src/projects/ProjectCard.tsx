@@ -14,13 +14,11 @@ export const ProjectCard = ({ project, inverted, odd }: Props) => {
     const history = useHistory();
     return (
         <div
-            className={classNames("", {
-                "project-card__container": !inverted,
-                "project-card__container--inverted": inverted,
-                "project-card__container--odd": inverted && odd,
+            className={classNames("project-card", {
+                "project-card--spacing": inverted,
             })}
         >
-            <Card className="project-card">
+            <Card>
                 <div className="project-card__title-container">
                     <p className="jkl-heading-1">{project.title}</p>
                 </div>
@@ -52,12 +50,6 @@ export const ProjectCard = ({ project, inverted, odd }: Props) => {
                     </div>
                 </div>
             </Card>
-            <div>
-                <p className="project-card__text project-card__text--year jkl-small">
-                    {project.year}
-                </p>
-                <hr className="project-card__timeline" />
-            </div>
         </div>
     );
 };
