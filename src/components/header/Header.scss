@@ -37,6 +37,8 @@ $medium: 900px;
     &__link {
         margin-left: $component-spacing--large;
         cursor: pointer;
+        color: $snohvit;
+
         @media screen and (max-width: $medium) {
             font-size: 12px;
         }

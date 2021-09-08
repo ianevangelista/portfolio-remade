@@ -9,7 +9,7 @@ $medium: 900px;
 .projects {
     display: grid;
     grid-template-columns: 200px 1fr;
-    height: 160vh;
+    min-height: 160vh;
 
     @media screen and (max-width: $medium) {
         display: block;

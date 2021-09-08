@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import "@fremtind/jkl-core/core.min.css";
 import "./index.scss";
 import { About } from "./about/About";
@@ -31,7 +31,7 @@ const App = () => {
 
 const Routes = (
     <div className="index">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL + "/"}>
             <App />
         </Router>
     </div>
