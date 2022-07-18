@@ -30,14 +30,16 @@ export const ProjectPage = () => {
         <Wrapper darkMode animation compactAutoHeight>
             <div className="project__title-row">
                 <p className="jkl-heading-1">{project?.title}</p>
-                <Link
-                    className="project__github"
-                    external
-                    href={project?.github}
-                    target="_blank"
-                >
-                    Github
-                </Link>
+                {project?.github && (
+                    <Link
+                        className="project__github"
+                        external
+                        href={project?.github}
+                        target="_blank"
+                    >
+                        Github
+                    </Link>
+                )}
             </div>
             <div
                 className={`project__animation-wrapper ${
