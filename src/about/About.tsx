@@ -96,7 +96,7 @@ export const About = () => {
                                     return (
                                         <ListItem
                                             key={hobby.title}
-                                            className="jkl-small"
+                                            className="jkl-small about"
                                         >
                                             <p className="about__bold">
                                                 {hobby.title}
@@ -118,11 +118,9 @@ export const About = () => {
                                     return (
                                         <ListItem
                                             key={e.study}
-                                            className="jkl-small"
+                                            className="jkl-small about"
                                         >
-                                            <p className="about__bold">
-                                                {e.study}
-                                            </p>
+                                            <p>{e.study}</p>
                                             <p>{e.school}</p>
                                             <p>{e.duration}</p>
                                         </ListItem>
@@ -141,7 +139,7 @@ export const About = () => {
                                     return (
                                         <ListItem
                                             key={e.title}
-                                            className="jkl-small"
+                                            className="jkl-small about"
                                         >
                                             <p className="about__bold">
                                                 {e.employer}
