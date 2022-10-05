@@ -51,7 +51,7 @@ export const ProjectPage = () => {
                     {project?.moreDescription}
                 </p>
             </div>
-            {project?.images && (
+            {project?.images && !(window.screen.width < 900) && (
                 <TertiaryButton
                     forceCompact
                     className="jkl-layout-spacing--xs-top jkl-layout-spacing--medium-bottom project__button"

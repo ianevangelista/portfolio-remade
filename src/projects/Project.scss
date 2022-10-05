@@ -50,4 +50,10 @@ $medium: 900px;
             @include jkl.text-style("body/small-screen");
         }
     }
+    &__button {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
 }
