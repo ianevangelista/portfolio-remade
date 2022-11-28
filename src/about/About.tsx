@@ -120,7 +120,9 @@ export const About = () => {
                                             key={e.study}
                                             className="jkl-small about"
                                         >
-                                            <p>{e.study}</p>
+                                            <p className="about__bold">
+                                                {e.study}
+                                            </p>
                                             <p>{e.school}</p>
                                             <p>{e.duration}</p>
                                         </ListItem>

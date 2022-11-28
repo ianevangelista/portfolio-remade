@@ -16,7 +16,7 @@ const fremtindStartDate = new Date(2021, 5);
 const fremtindEndDate = new Date(2021, 7);
 
 const infiniwellStartDate = new Date(2020, 8);
-const infiniwellEndDate = new Date(2021, 4);
+const infiniwellEndDate = new Date();
 
 export const Experiences: Experience[] = [
     {
