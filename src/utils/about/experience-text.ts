@@ -10,13 +10,13 @@ const bekkStartDate = new Date(2022, 5);
 const bekkEndDate = new Date(2022, 7);
 
 const infiniwellJobStartDate = new Date(2021, 8);
-const infiniwellJobEndDate = new Date(2022, 4);
+const infiniwellJobEndDate = new Date();
 
 const fremtindStartDate = new Date(2021, 5);
 const fremtindEndDate = new Date(2021, 7);
 
 const infiniwellStartDate = new Date(2020, 8);
-const infiniwellEndDate = new Date();
+const infiniwellEndDate = new Date(2021, 4);
 
 export const Experiences: Experience[] = [
     {
